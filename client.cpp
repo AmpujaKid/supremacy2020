@@ -5,7 +5,7 @@ Client g_cl{ };
 // init routine.
 ulong_t __stdcall Client::init(void* arg) {
 	// if not in interwebz mode, the driver will not set the username.
-	g_cl.m_user = XOR("AmpujaKid");
+	g_cl.m_user = XOR("user");
 
 	// stop here if we failed to acquire all the data needed from csgo.
 	if (!g_csgo.init())
