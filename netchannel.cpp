@@ -1,3 +1,5 @@
+// crash on line 46
+
 #include "includes.h"
 
 #define NET_FRAMES_BACKUP 64 // must be power of 2. 
@@ -41,7 +43,7 @@ void Hooks::ProcessPacket(void* packet, bool header) {
 
 	// get this from CL_FireEvents string "Failed to execute event for classId" in engine.dll
 	for (CEventInfo* it{ g_csgo.m_cl->m_events }; it != nullptr; it = it->m_next) {
-		if (!it->m_class_id) // "*it* was 0x1" crash
+		if (!it->m_class_id)                                                              ///////////// "*it* was 0x1" crash /////////////
 			continue;
 
 		// set all delays to instant.
